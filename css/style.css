@@ -122,11 +122,6 @@ nav a:focus:after {
   cursor: pointer;
 }
 
-.menu-item label:hover,
-.menu-item a:hover {
-  background-color: #efdcdc;
-}
-
 .menu-item a {
   color: #683131;
 }
@@ -143,10 +138,6 @@ nav a:focus:after {
 .menu-item input:checked ~ label .arrow {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-}
-
-.menu-item input:checked ~ label {
-  background-color: #efdcdc;
 }
 
 .menu .img {
@@ -175,7 +166,7 @@ nav a:focus:after {
 }
 
 .menu .third-accord {
-  padding-left: 20px;
+  padding-left: 10px;
 }
 
 .content {
