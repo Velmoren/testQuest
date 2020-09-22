@@ -1,0 +1,343 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+header {
+  -webkit-box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid #683131;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+main {
+  position: fixed;
+  top: 37px;
+  right: 0;
+  left: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  padding: 0 15px;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav {
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-self: start;
+}
+
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  border-right: 2px solid #683131;
+  color: #683131;
+  position: relative;
+}
+
+nav a:last-child {
+  border-right: none;
+}
+
+nav a:after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0%;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: width .3s ease-in-out;
+  transition: width .3s ease-in-out;
+  background-color: #683131;
+}
+
+nav a:hover:after,
+nav a:focus:after {
+  width: 80%;
+}
+
+.menu {
+  width: 300px;
+  height: 100vh;
+  overflow-y: scroll;
+  border-right: 2px solid #683131;
+}
+
+.menu-item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+
+.menu-item input {
+  display: none;
+}
+
+.menu-item label {
+  padding: 10px 10px;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.menu-item label:hover,
+.menu-item a:hover {
+  background-color: #efdcdc;
+}
+
+.menu-item a {
+  color: #683131;
+}
+
+.menu-item .acc-content {
+  height: 0;
+  overflow: hidden;
+}
+
+.menu-item input:checked ~ .acc-content {
+  height: auto;
+}
+
+.menu-item input:checked ~ label .arrow {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.menu-item input:checked ~ label {
+  background-color: #efdcdc;
+}
+
+.menu .img {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.menu .text {
+  padding: 0 25px 0 5px;
+  color: #683131;
+}
+
+.menu .arrow {
+  display: block;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 5px;
+  background: url("../images/down-arrow.svg") no-repeat center/contain;
+}
+
+.menu .second-accord {
+  padding-left: 10px;
+}
+
+.menu .third-accord {
+  padding-left: 20px;
+}
+
+.content {
+  width: 100%;
+}
+
+.content .bread-crumbs {
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10px;
+  border-bottom: 2px solid #683131;
+}
+
+.content .bread-crumbs a {
+  padding: 5px 5px;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  color: #683131;
+}
+
+.content .bread-crumbs a:after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0%;
+  bottom: 4px;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: width .3s ease-in-out;
+  transition: width .3s ease-in-out;
+  background-color: #683131;
+}
+
+.content .bread-crumbs a:hover:after,
+.content .bread-crumbs a:focus:after {
+  width: 80%;
+}
+
+.content .bread-crumbs span {
+  padding: 5px 5px;
+}
+
+.content .bread-crumbs .arrow {
+  background: url("../images/right.svg") no-repeat center/contain;
+  width: 10px;
+  height: 10px;
+}
+
+.content .content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow: auto;
+  height: 90vh;
+}
+
+.content .content-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 250px;
+  margin: 10px 25px;
+  cursor: pointer;
+}
+
+.content .content-item__image img {
+  width: 250px;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.content .content-item__subtitle {
+  font-size: 24px;
+  color: #683131;
+}
+
+.content .content-item:hover {
+  -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.img-1 {
+  background: url("../images/folder.svg") no-repeat center/contain;
+}
+
+.img-2 {
+  background: url("../images/folder-open.svg") no-repeat center/contain;
+}
+
+.img-3 {
+  background: url("../images/plus.svg") no-repeat center/contain;
+}
+
+.img-4 {
+  background: url("../images/minus.svg") no-repeat center/contain;
+}
+
+.img-5 {
+  background: url("../images/checkbox.svg") no-repeat center/contain;
+}
+
+.img-6 {
+  background: url("../images/stop.svg") no-repeat center/contain;
+}
+
+.img-7 {
+  background: url("../images/play.svg") no-repeat center/contain;
+}
+
+.img-8 {
+  background: url("../images/play.svg") no-repeat center/contain;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.img-9 {
+  background: url("../images/link.svg") no-repeat center/contain;
+}
+
+.img-10 {
+  background: url("../images/folder-open.svg") no-repeat center/contain;
+}
+
+.img-11 {
+  background: url("../images/play.svg") no-repeat center/contain;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.img-12 {
+  background: url("../images/play.svg") no-repeat center/contain;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.link {
+  background: url("../images/link.svg") no-repeat center/contain;
+}
+/*# sourceMappingURL=style.css.map */

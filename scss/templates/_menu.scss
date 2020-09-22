@@ -1,0 +1,87 @@
+.menu {
+  width: 300px;
+  height: 100vh;
+  overflow-y: scroll;
+  border-right: 2px solid #683131;
+
+  &-item {
+
+    & a {
+      display: flex;
+      justify-content: start;
+      padding: 10px 10px;
+      text-decoration: none;
+    }
+
+    & input {
+      display: none;
+    }
+
+    & label {
+      padding: 10px 10px;
+      font-size: 16px;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+    }
+
+    & label,
+    a {
+      &:hover {
+        background-color: #efdcdc;
+      }
+    }
+
+    & a {
+      color: #683131
+    }
+
+    & .acc-content {
+      height: 0;
+      overflow: hidden;
+    }
+
+    & input:checked~.acc-content {
+      height: auto;
+    }
+
+    & input:checked~label .arrow {
+      transform: rotate(180deg);
+    }
+
+    & input:checked~label {
+      background-color: #efdcdc;
+    }
+  }
+
+  .img {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+
+  .text {
+    padding: 0 25px 0 5px;
+    color: #683131;
+  }
+
+  .arrow {
+    display: block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 5px;
+    background: url('../images/down-arrow.svg') no-repeat center/contain;
+  }
+
+  .second-accord {
+    padding-left: 10px;
+  }
+
+  .third-accord {
+    padding-left: 20px;
+  }
+}

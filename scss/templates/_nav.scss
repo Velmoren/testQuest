@@ -1,0 +1,37 @@
+nav {
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-self: start;
+
+  a {
+    padding: 5px 10px;
+    text-decoration: none;
+    border-right: 2px solid #683131;
+    color: #683131;
+    position: relative;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  a:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0%;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    transition: width .3s ease-in-out;
+
+    background-color: #683131;
+  }
+
+  a:hover:after,
+  a:focus:after {
+    width: 80%;
+  }
+}
